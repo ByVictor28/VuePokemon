@@ -1,11 +1,17 @@
 <template>
+
+  <div class="bg-red-200 p-4">
+    <h1>Who is this pokemon?</h1>
+    <h3 class="font-bold text-2xl">Score: {{score}}</h3>
+  </div>
   <h1 v-if="!pokemonSelected">Wait for a second</h1>
   <div v-else>
-    <h1>Who is this pokemon?</h1>
     <PokemonImageVue :pokemonId="pokemonSelected.id" :showPokemon="showPokemon"/>
     <PokemonOptionsVue :pokemons="pokemonArr" @selection="checkAnswer($event)" :showResult="showResult"/>    
-    <div v-if="showResult">
-      <h2>{{result}}</h2>
+    <!-- <div v-if="showResult"> -->
+    <h2>{{result}}</h2>
+    <div class="flex gap-4 justify-center">
+      <button @click="nextPokemon" class="bg-red-100 px-3 py-1 rounded-lg border-2 border-black hover:bg-red-300">Next pokemon</button>
       <button @click="newGame" class="bg-red-100 px-3 py-1 rounded-lg border-2 border-black hover:bg-red-300">New game</button>
     </div>
   </div>
@@ -27,7 +33,8 @@ export default {
       pokemonSelected:null,
       showPokemon:false,
       showResult:false,
-      result:""
+      result:"",
+      score:0
     }
   },
   methods:{
@@ -39,10 +46,23 @@ export default {
     },
     checkAnswer(event){
       this.showPokemon = true
-      this.result = event === this.pokemonSelected.id ? `Congratulation pokemon was ${this.pokemonSelected.name}`:`Opss... pokemon was ${this.pokemonSelected.name}`
+      if (this.pokemonSelected.id === event) {
+        this.result = `Congratulation pokemon was ${this.pokemonSelected.name}`
+        this.score++
+      }else{
+        this.result = `Opss... pokemon was ${this.pokemonSelected.name}`
+      }
       this.showResult=true
     },
     newGame(){
+      this.pokemonSelected=null
+      this.getPokemonArr()  
+      this.showPokemon=false
+      this.result = ""
+      this.showResult = false
+      this.score = 0
+    },
+    nextPokemon(){
       this.pokemonSelected=null
       this.getPokemonArr()  
       this.showPokemon=false
