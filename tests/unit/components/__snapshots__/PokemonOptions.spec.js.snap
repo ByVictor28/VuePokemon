@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonOptions component sreenshot match 1`] = `
+<div class="flex flex-col items-center">
+  <ul class="">
+    <li class="bg-red-200 my-4 w-36 py-1 hover:bg-red-400 rounded-md cursor-pointer transition-colors"><span class="text-red-400">tynamo</span></li>
+    <li class="bg-red-200 my-4 w-36 py-1 hover:bg-red-400 rounded-md cursor-pointer transition-colors"><span class="text-red-400">mr-mime</span></li>
+    <li class="bg-red-200 my-4 w-36 py-1 hover:bg-red-400 rounded-md cursor-pointer transition-colors"><span class="text-red-400">mandibuzz</span></li>
+    <li class="bg-red-200 my-4 w-36 py-1 hover:bg-red-400 rounded-md cursor-pointer transition-colors"><span class="text-red-400">spheal</span></li>
+  </ul>
+</div>
+`;

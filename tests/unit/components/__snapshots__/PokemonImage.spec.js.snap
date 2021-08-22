@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonImage componebt snapshot match 1`] = `
+<div class="">
+  <div class="select-none w-full h-52 flex flex-col justify-center items-center "><img class="filter brightness-0 w-52 h-52 absolute select-none" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/100.svg" alt="Pokemon Shadow">
+    <!--v-if-->
+  </div>
+</div>
+`;

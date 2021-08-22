@@ -18,7 +18,7 @@ const getPokemonOptions = async () =>{
 }
 
 
-const getPokemonNames =async (pokemons) => {
+export const getPokemonNames =async (pokemons) => {
   
   const list = await Promise.all( 
     pokemons.map(async pokemon => {

@@ -1,13 +1,13 @@
 <template>
 
-  <div class="bg-red-200 p-4">
+  <div class="p-4">
     <h1>Who is this pokemon?</h1>
     <h3 class="font-bold text-2xl">Score: {{score}}</h3>
   </div>
   <h1 v-if="!pokemonSelected">Wait for a second</h1>
   <div v-else>
-    <PokemonImageVue :pokemonId="pokemonSelected.id" :showPokemon="showPokemon"/>
-    <PokemonOptionsVue :pokemons="pokemonArr" @selection="checkAnswer($event)" :showResult="showResult"/>    
+    <PokemonImageVue pokemon-test-id="image" :pokemonId="pokemonSelected.id" :showPokemon="showPokemon"/>
+    <PokemonOptionsVue pokemon-test-id="options" :pokemons="pokemonArr" @selection="checkAnswer($event)" :showResult="showResult"/>    
     <!-- <div v-if="showResult"> -->
     <h2>{{result}}</h2>
     <div class="flex gap-4 justify-center">
