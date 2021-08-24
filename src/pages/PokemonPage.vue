@@ -15,6 +15,7 @@
       <button @click="newGame" class="bg-red-100 px-3 py-1 rounded-lg border-2 border-black hover:bg-red-300">New game</button>
     </div>
   </div>
+  <h2>Hola newMenu</h2>
 </template>
 
 <script>
